@@ -180,6 +180,7 @@ export function MentionTextarea({
       )}
 
       <textarea
+        aria-label={placeholder}
         ref={textareaRef}
         value={value}
         onInput={handleInput}

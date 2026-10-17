@@ -222,6 +222,7 @@ function Mensagens() {
                 <div className="relative">
                   <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
                   <Input
+                    aria-label={texts.messages.searchContacts}
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder={texts.messages.searchContacts}
@@ -259,6 +260,7 @@ function Mensagens() {
               <div className="relative">
                 <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
                 <Input
+                  aria-label={texts.messages.searchConversations}
                   placeholder={texts.messages.searchConversations}
                   className="h-9 rounded-full bg-muted pl-9"
                 />
@@ -459,6 +461,7 @@ function Mensagens() {
                 className="flex items-end gap-2 border-t border-border p-3"
               >
                 <textarea
+                  aria-label={texts.messages.inputPlaceholder}
                   value={text}
                   onChange={(e) => setText(e.target.value)}
                   onKeyDown={(e) => {

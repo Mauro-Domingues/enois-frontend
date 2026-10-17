@@ -625,6 +625,7 @@ function Profile() {
 
                     <div className="space-y-4 pt-2">
                       <Textarea
+                        aria-label={texts.profile.recommendPlaceholder}
                         value={recommendComment}
                         onChange={(e) => setRecommendComment(e.target.value)}
                         placeholder={texts.profile.recommendPlaceholder}

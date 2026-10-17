@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 
+import { MAIN_CONTENT_ID } from "@/constants/accessibility";
 import { texts } from "@/texts";
 import type { LegalLastUpdatedProps } from "@/types/components/legal/legal-last-updated-props";
 import type { LegalSectionProps } from "@/types/components/legal/legal-section-props";
@@ -32,7 +33,11 @@ export function LegalLayout({ children }: WithRequiredChildren) {
         </div>
       </header>
 
-      <main className="mx-auto max-w-4xl px-4 py-10 sm:px-6 sm:py-14">
+      <main
+        id={MAIN_CONTENT_ID}
+        tabIndex={-1}
+        className="mx-auto max-w-4xl px-4 py-10 outline-none sm:px-6 sm:py-14"
+      >
         <div className="surface-card space-y-8 p-6 sm:p-10">{children}</div>
       </main>
 

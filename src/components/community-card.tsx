@@ -47,7 +47,7 @@ export function CommunityCard({
             <div className="min-w-0">
               <p className="text-xs font-medium uppercase tracking-wider text-primary">{c.topic}</p>
 
-              <h3 className="truncate font-semibold">{c.name}</h3>
+              <h2 className="truncate font-semibold">{c.name}</h2>
             </div>
           </div>
 

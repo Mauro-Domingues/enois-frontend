@@ -23,6 +23,8 @@ import { useThemeSync } from "@/lib/theme/use-theme-sync";
 
 import { ToastProvider } from "@/components/ui/toast";
 
+import { SkipLink } from "@/components/skip-link";
+
 import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
@@ -153,6 +155,7 @@ function RootShell({ children }: WithRequiredChildren) {
       </head>
 
       <body>
+        <SkipLink />
         {children}
         <Scripts />
       </body>

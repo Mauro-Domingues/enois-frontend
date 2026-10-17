@@ -90,6 +90,7 @@ export function GlobalSearch() {
         <div className="relative w-full max-w-md px-4 md:max-w-none md:px-0">
           <Search className="pointer-events-none absolute left-7 top-1/2 z-10 h-4 w-4 -translate-y-1/2 text-text-subtle md:left-3" />
           <Input
+            aria-label={texts.search.placeholder}
             ref={inputRef}
             value={query}
             onChange={(event) => {

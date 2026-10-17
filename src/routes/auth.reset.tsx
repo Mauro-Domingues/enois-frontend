@@ -182,6 +182,7 @@ function ResetPassword() {
 
                   <div className="relative">
                     <Input
+                      aria-label={texts.auth.fields.newPassword}
                       name="password"
                       type={show ? "text" : "password"}
                       placeholder={texts.auth.placeholders.newPassword}
@@ -226,7 +227,7 @@ function ResetPassword() {
                 <Link
                   to="/entrar"
                   search={{ tab: "login" }}
-                  className="text-primary hover:underline"
+                  className="text-primary underline underline-offset-2"
                 >
                   {texts.common.enter}
                 </Link>

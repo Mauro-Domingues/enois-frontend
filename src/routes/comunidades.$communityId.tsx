@@ -768,7 +768,11 @@ function EditCommunityForm({ community, onClose }: EditCommunityFormProps) {
       <div className="space-y-1.5">
         <Label className="text-xs text-muted-foreground">{texts.communities.create.name}</Label>
 
-        <Input value={name} onChange={(e) => setName(e.target.value)} />
+        <Input
+          aria-label={texts.communities.create.name}
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
       </div>
 
       <div className="space-y-1.5">
@@ -776,13 +780,18 @@ function EditCommunityForm({ community, onClose }: EditCommunityFormProps) {
           {texts.communities.create.description}
         </Label>
 
-        <Textarea value={description} onChange={(e) => setDescription(e.target.value)} rows={3} />
+        <Textarea
+          aria-label={texts.communities.create.description}
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          rows={3}
+        />
       </div>
 
       <div className="space-y-1.5">
         <Label className="text-xs text-muted-foreground">{texts.communities.detail.cover}</Label>
 
-        <div className="flex gap-1.5" role="tablist" aria-label={texts.communities.detail.bannerHtml.title}>
+        <div className="flex gap-1.5" role="group" aria-label={texts.communities.detail.bannerHtml.title}>
           <Pill active={bannerMode === "photo"} onClick={() => setBannerMode("photo")}>
             <>{texts.communities.detail.bannerHtml.photoTab}</>
           </Pill>

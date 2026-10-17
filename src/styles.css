@@ -86,7 +86,7 @@
   --muted-foreground: oklch(0.48 0.02 280);
   --accent: oklch(0.95 0.04 295);
   --accent-foreground: oklch(0.35 0.15 295);
-  --destructive: oklch(0.6 0.22 25);
+  --destructive: oklch(0.52 0.21 25);
   --destructive-foreground: oklch(0.99 0.005 290);
   --border: oklch(0.92 0.01 285);
   --input: oklch(0.92 0.01 285);
@@ -123,7 +123,7 @@
   --surface-3: #f5f3ff;
   --border-soft: #e5e0eb;
   --text-strong: #0f0f14;
-  --text-subtle: #6b7280;
+  --text-subtle: #5b6170;
   --text-date: #a1a1aa;
 }
 
@@ -183,6 +183,25 @@
 
   * {
     border-color: var(--color-border);
+  }
+
+  /* Foco sempre visível para quem navega por teclado. Componentes com anel próprio
+     (`focus-visible:ring-*`) zeram o outline e mantêm o anel. */
+  :focus-visible {
+    outline: 2px solid var(--color-ring);
+    outline-offset: 2px;
+  }
+
+  /* Quem pede menos movimento no sistema não recebe animações nem rolagem suave. */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 
   body {

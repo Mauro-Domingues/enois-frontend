@@ -215,6 +215,7 @@ export function EditProfileDialog({ profile, children }: Props) {
             <div className="space-y-5">
               <Field label={texts.profile.edit.fields.name}>
                 <Input
+                  aria-label={texts.profile.edit.fields.name}
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   maxLength={160}
@@ -224,6 +225,7 @@ export function EditProfileDialog({ profile, children }: Props) {
 
               <Field label={texts.profile.edit.fields.username} error={usernameError}>
                 <Input
+                  aria-label={texts.profile.edit.fields.username}
                   value={username}
                   onChange={(e) => {
                     setUsername(e.target.value);
@@ -282,6 +284,7 @@ export function EditProfileDialog({ profile, children }: Props) {
 
               <Field label={texts.profile.edit.fields.headline}>
                 <Input
+                  aria-label={texts.profile.edit.fields.headline}
                   value={headline}
                   onChange={(e) => setHeadline(e.target.value)}
                   placeholder={texts.profile.edit.placeholders.headline}
@@ -292,6 +295,7 @@ export function EditProfileDialog({ profile, children }: Props) {
 
               <Field label={texts.profile.edit.fields.bio}>
                 <Textarea
+                  aria-label={texts.profile.edit.fields.bio}
                   value={bio}
                   onChange={(e) => setBio(e.target.value)}
                   rows={4}
@@ -303,6 +307,7 @@ export function EditProfileDialog({ profile, children }: Props) {
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <Field label={texts.profile.edit.fields.company}>
                   <Input
+                    aria-label={texts.profile.edit.fields.company}
                     value={company}
                     onChange={(e) => setCompany(e.target.value)}
                     maxLength={160}
@@ -312,6 +317,7 @@ export function EditProfileDialog({ profile, children }: Props) {
 
                 <Field label={texts.profile.edit.fields.location}>
                   <Input
+                    aria-label={texts.profile.edit.fields.location}
                     value={location}
                     onChange={(e) => setLocation(e.target.value)}
                     maxLength={160}
@@ -322,6 +328,7 @@ export function EditProfileDialog({ profile, children }: Props) {
 
               <Field label={texts.profile.edit.fields.availability}>
                 <Input
+                  aria-label={texts.profile.edit.fields.availability}
                   value={availability}
                   onChange={(e) => setAvailability(e.target.value)}
                   placeholder={texts.profile.edit.placeholders.availability}
@@ -332,6 +339,7 @@ export function EditProfileDialog({ profile, children }: Props) {
 
               <Field label={texts.profile.edit.fields.portfolio}>
                 <Input
+                  aria-label={texts.profile.edit.fields.portfolio}
                   value={portfolio}
                   onChange={(e) => setPortfolio(e.target.value)}
                   placeholder={texts.profile.edit.placeholders.portfolio}
@@ -342,6 +350,7 @@ export function EditProfileDialog({ profile, children }: Props) {
 
               <Field label={texts.profile.edit.fields.externalLinks}>
                 <Textarea
+                  aria-label={texts.profile.edit.fields.externalLinks}
                   value={linksText}
                   onChange={(e) => setLinksText(e.target.value)}
                   rows={3}
@@ -354,6 +363,7 @@ export function EditProfileDialog({ profile, children }: Props) {
                 {/* 1600 caracteres: espaço para listar habilidades separadas por vírgula ou escrever
                     uma frase inteira — o servidor aceita o mesmo teto. */}
                 <Input
+                  aria-label={texts.profile.edit.fields.skills}
                   value={skillsText}
                   onChange={(e) => setSkillsText(e.target.value)}
                   maxLength={1600}
@@ -363,6 +373,7 @@ export function EditProfileDialog({ profile, children }: Props) {
 
               <Field label={texts.profile.edit.fields.goals}>
                 <Input
+                  aria-label={texts.profile.edit.fields.goals}
                   value={goalsText}
                   onChange={(e) => setGoalsText(e.target.value)}
                   maxLength={1600}
@@ -607,6 +618,7 @@ function SubList<
             <Field key={f.key} label={f.label}>
               {f.multiline ? (
                 <Textarea
+                  aria-label={f.label}
                   value={form[f.key] ?? ""}
                   onChange={(e) => setForm((p) => ({ ...p, [f.key]: e.target.value }))}
                   rows={2}
@@ -616,6 +628,7 @@ function SubList<
                 />
               ) : (
                 <Input
+                  aria-label={f.label}
                   type={f.type ?? "text"}
                   value={form[f.key] ?? ""}
                   onChange={(e) => setForm((p) => ({ ...p, [f.key]: e.target.value }))}

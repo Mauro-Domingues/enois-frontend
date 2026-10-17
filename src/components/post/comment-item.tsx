@@ -162,6 +162,7 @@ export function CommentItem({ comment, replyingTo }: CommentItemProps) {
           {editing ? (
             <div className="mt-1 space-y-2">
               <Textarea
+                aria-label={texts.posts.comments.editLabel}
                 value={editDraft}
                 onChange={(event) => setEditDraft(event.target.value)}
                 rows={3}

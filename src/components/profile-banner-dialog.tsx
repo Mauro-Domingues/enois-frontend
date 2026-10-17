@@ -58,7 +58,7 @@ export function ProfileBannerDialog({
 
         <div
           className="flex flex-wrap gap-1.5"
-          role="tablist"
+          role="group"
           aria-label={texts.profile.bannerHtml.title}
         >
           <Pill active={mode === "photo"} onClick={() => setMode("photo")}>

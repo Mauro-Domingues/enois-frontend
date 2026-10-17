@@ -57,6 +57,10 @@ export const texts = {
     close: "Fechar",
     closeAlert: "Fechar alerta",
     systemAlerts: "Alertas do sistema",
+    skipToContent: "Pular para o conteúdo",
+    embeddedMedia: (provider: string) =>
+      `Conteúdo incorporado do ${provider.charAt(0).toUpperCase()}${provider.slice(1)}`,
+    mainNavigation: "Navegação principal",
   },
 
   theme: {
@@ -871,6 +875,7 @@ export const texts = {
       replyingTo: (name: string) => `respondendo a ${name}`,
       delete: "Excluir",
       editError: "Não foi possível salvar a edição. Tente de novo.",
+      editLabel: "Editar comentário",
       loading: "Carregando comentários...",
       loadMore: "Ver comentários anteriores",
       loadingMore: "Carregando...",
@@ -1805,6 +1810,7 @@ export const texts = {
 
   post: {
     seoTitle: "Publicação · Énóis",
+    pageHeading: "Publicação",
     seoDescription: "Veja esta publicação no Énóis — rede profissional gratuita, sem anúncios.",
     back: "Voltar",
     loading: "Carregando publicação...",

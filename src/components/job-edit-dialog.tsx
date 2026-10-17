@@ -104,7 +104,12 @@ function EditForm({
       <div className="space-y-1.5">
         <Label className="text-xs font-normal text-text-subtle">{texts.jobs.fields.title}</Label>
 
-        <Input value={title} onChange={(e) => setTitle(e.target.value)} className="bg-muted" />
+        <Input
+          aria-label={texts.jobs.fields.title}
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          className="bg-muted"
+        />
       </div>
 
       <div className="space-y-1.5">
@@ -112,7 +117,12 @@ function EditForm({
           {texts.jobs.fields.company}
         </Label>
 
-        <Input value={company} onChange={(e) => setCompany(e.target.value)} className="bg-muted" />
+        <Input
+          aria-label={texts.jobs.fields.company}
+          value={company}
+          onChange={(e) => setCompany(e.target.value)}
+          className="bg-muted"
+        />
       </div>
 
       <div className="grid gap-3 sm:grid-cols-3">
@@ -122,6 +132,7 @@ function EditForm({
           </Label>
 
           <select
+            aria-label={texts.jobs.fields.location}
             value={location}
             onChange={(e) => setLocation(e.target.value)}
             className={SELECT_CLASS}
@@ -139,7 +150,12 @@ function EditForm({
             {texts.jobs.fields.type}
           </Label>
 
-          <select value={type} onChange={(e) => setType(e.target.value)} className={SELECT_CLASS}>
+          <select
+            aria-label={texts.jobs.fields.type}
+            value={type}
+            onChange={(e) => setType(e.target.value)}
+            className={SELECT_CLASS}
+          >
             {JOB_TYPES.map((t) => (
               <option key={t} value={t}>
                 {t}
@@ -153,7 +169,12 @@ function EditForm({
             {texts.jobs.fields.level}
           </Label>
 
-          <select value={level} onChange={(e) => setLevel(e.target.value)} className={SELECT_CLASS}>
+          <select
+            aria-label={texts.jobs.fields.level}
+            value={level}
+            onChange={(e) => setLevel(e.target.value)}
+            className={SELECT_CLASS}
+          >
             {JOB_LEVELS.map((l) => (
               <option key={l} value={l}>
                 {l.charAt(0) + l.slice(1).toLowerCase()}
@@ -183,6 +204,7 @@ function EditForm({
           </select>
 
           <Input
+            aria-label={texts.jobs.fields.salaryPlaceholder}
             value={salary}
             onChange={(e) => setSalary(e.target.value)}
             placeholder={texts.jobs.fields.salaryPlaceholder}
@@ -201,6 +223,7 @@ function EditForm({
         </Label>
 
         <Input
+          aria-label={texts.jobs.fields.skills}
           value={skills}
           onChange={(e) => setSkills(e.target.value)}
           placeholder={texts.jobs.fields.skillsPlaceholder}
@@ -214,6 +237,7 @@ function EditForm({
         </Label>
 
         <Textarea
+          aria-label={texts.jobs.fields.description}
           value={description}
           onChange={(e) => setDescription(e.target.value)}
           rows={4}

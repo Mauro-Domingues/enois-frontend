@@ -1,3 +1,4 @@
+import { MAIN_CONTENT_ID } from "@/constants/accessibility";
 import type { WithRequiredChildren } from "@/types/components/with-required-children";
 
 function AppLayoutRoot({ children }: WithRequiredChildren) {
@@ -19,7 +20,11 @@ function AppLayoutSidebar({ children }: WithRequiredChildren) {
 }
 
 function AppLayoutMain({ children }: WithRequiredChildren) {
-  return <main className="min-w-0 flex-1">{children}</main>;
+  return (
+    <main id={MAIN_CONTENT_ID} tabIndex={-1} className="min-w-0 flex-1 outline-none">
+      {children}
+    </main>
+  );
 }
 
 function AppLayoutNavigation({ children }: WithRequiredChildren) {

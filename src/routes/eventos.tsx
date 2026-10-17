@@ -130,7 +130,7 @@ function Eventos() {
                     )}
                   </div>
 
-                  <h3 className="mt-2 break-words font-semibold">{e.title}</h3>
+                  <h2 className="mt-2 break-words font-semibold">{e.title}</h2>
 
                   <p className="mt-1 text-xs text-muted-foreground">
                     {texts.events.hostedBy(e.host)}
@@ -223,6 +223,7 @@ function CreateEventForm({ onSave, isPending }: CreateEventFormProps) {
     <div className="space-y-4 pt-2">
       <Field label={texts.events.form.title}>
         <Input
+          aria-label={texts.events.form.title}
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           className="h-10 border-transparent bg-muted"
@@ -232,6 +233,7 @@ function CreateEventForm({ onSave, isPending }: CreateEventFormProps) {
       <div className="grid grid-cols-2 gap-3">
         <Field label={texts.events.form.date}>
           <Input
+            aria-label={texts.events.form.date}
             type="date"
             value={date}
             onChange={(e) => setDate(e.target.value)}
@@ -241,6 +243,7 @@ function CreateEventForm({ onSave, isPending }: CreateEventFormProps) {
 
         <Field label={texts.events.form.time}>
           <Input
+            aria-label={texts.events.form.time}
             type="time"
             value={time}
             onChange={(e) => setTime(e.target.value)}
@@ -251,6 +254,7 @@ function CreateEventForm({ onSave, isPending }: CreateEventFormProps) {
 
       <Field label={texts.events.form.host}>
         <Input
+          aria-label={texts.events.form.host}
           value={host}
           onChange={(e) => setHost(e.target.value)}
           placeholder={texts.events.form.hostPlaceholder}
@@ -306,6 +310,7 @@ function CreateEventForm({ onSave, isPending }: CreateEventFormProps) {
       {format !== "IN_PERSON" && (
         <Field label={texts.events.form.streamUrl}>
           <Input
+            aria-label={texts.events.form.streamUrl}
             value={streamUrl}
             onChange={(e) => setStreamUrl(e.target.value)}
             placeholder={texts.events.form.streamUrlPlaceholder}
@@ -317,6 +322,7 @@ function CreateEventForm({ onSave, isPending }: CreateEventFormProps) {
       {format !== "ONLINE" && (
         <Field label={texts.events.form.location}>
           <Input
+            aria-label={texts.events.form.location}
             value={location}
             onChange={(e) => setLocation(e.target.value)}
             placeholder={texts.events.form.locationPlaceholder}
@@ -327,6 +333,7 @@ function CreateEventForm({ onSave, isPending }: CreateEventFormProps) {
 
       <Field label={texts.events.form.format}>
         <select
+          aria-label={texts.events.form.format}
           value={format}
           onChange={(e) => setFormat(e.target.value as CreateEventRequest["format"])}
           className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm h-10 border-transparent bg-muted"

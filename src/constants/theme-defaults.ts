@@ -18,7 +18,7 @@ export const DEFAULT_THEME_SETTINGS: ThemeSettings = {
  * usa esses valores para medir o contraste real das escolhas do usuário.
  */
 export const FIXED_THEME_COLORS = {
-  light: { strong: "#0f0f14", subtle: "#6b7280" },
+  light: { strong: "#0f0f14", subtle: "#5b6170" },
   dark: { strong: "#e8e6ff", subtle: "#9ca3af" },
 } as const;
 

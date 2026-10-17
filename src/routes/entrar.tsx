@@ -171,13 +171,13 @@ function Auth() {
           <p className="mt-6 text-center text-xs text-muted-foreground">
             <>{texts.auth.terms.prefix}</>
 
-            <Link to="/termos" className="text-primary hover:underline">
+            <Link to="/termos" className="text-primary underline underline-offset-2">
               {texts.auth.terms.terms}
             </Link>
 
             <>{texts.auth.terms.conjunction}</>
 
-            <Link to="/privacidade" className="text-primary hover:underline">
+            <Link to="/privacidade" className="text-primary underline underline-offset-2">
               {texts.auth.terms.privacy}
             </Link>
 
@@ -313,6 +313,7 @@ function SignupForm(_props: AuthFormProps) {
       <form onSubmit={submit} className="space-y-4" noValidate>
         <Field label={texts.auth.fields.fullName} error={errors.name}>
           <Input
+            aria-label={texts.auth.fields.fullName}
             name="name"
             placeholder={texts.auth.placeholders.name}
             autoComplete="name"
@@ -323,6 +324,7 @@ function SignupForm(_props: AuthFormProps) {
 
         <Field label={texts.auth.fields.email} error={errors.email}>
           <Input
+            aria-label={texts.auth.fields.email}
             name="email"
             type="email"
             placeholder={texts.auth.placeholders.email}
@@ -335,6 +337,7 @@ function SignupForm(_props: AuthFormProps) {
         <Field label={texts.auth.fields.password} error={errors.password}>
           <div className="relative">
             <Input
+              aria-label={texts.auth.fields.password}
               name="password"
               type={show ? "text" : "password"}
               placeholder={texts.auth.placeholders.newPassword}
@@ -551,6 +554,7 @@ function LoginForm({ onDone, onForgot }: LoginFormProps) {
       <form onSubmit={submit} className="space-y-4" noValidate>
         <Field label={texts.auth.fields.email} error={errors.email}>
           <Input
+            aria-label={texts.auth.fields.email}
             name="email"
             type="email"
             placeholder={texts.auth.placeholders.email}
@@ -575,6 +579,7 @@ function LoginForm({ onDone, onForgot }: LoginFormProps) {
         >
           <div className="relative">
             <Input
+              aria-label={texts.auth.fields.password}
               name="password"
               type={show ? "text" : "password"}
               placeholder={texts.auth.placeholders.password}
@@ -667,6 +672,7 @@ function TwoFactorForm({
       <form onSubmit={submit} className="mt-6 space-y-4" noValidate>
         <Field label={texts.auth.twoFactor.code}>
           <Input
+            aria-label={texts.auth.twoFactor.code}
             name="code"
             inputMode="numeric"
             autoComplete="one-time-code"
@@ -784,6 +790,7 @@ function ForgotPasswordDialog({ open, onOpenChange }: ForgotPasswordDialogProps)
               <Label className="text-sm font-medium">{texts.auth.fields.email}</Label>
 
               <Input
+                aria-label={texts.auth.fields.email}
                 name="email"
                 type="email"
                 placeholder={texts.auth.placeholders.email}

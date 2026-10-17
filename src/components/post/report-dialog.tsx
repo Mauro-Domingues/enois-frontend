@@ -59,6 +59,7 @@ export function ReportDialog({ postId }: PostIdProps) {
             </Label>
 
             <select
+              aria-label={texts.posts.report.reason}
               value={reason}
               onChange={(e) => setReason(e.target.value as ReportReason)}
               className="flex h-10 w-full rounded-md border border-border-soft bg-background px-3 py-2 text-sm font-normal text-text-strong border-transparent bg-muted"
@@ -77,6 +78,7 @@ export function ReportDialog({ postId }: PostIdProps) {
             </Label>
 
             <Textarea
+              aria-label={texts.posts.report.description}
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               rows={3}

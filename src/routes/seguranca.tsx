@@ -345,6 +345,7 @@ function TotpSection({ status, onError, onDone }: SectionProps) {
             </Label>
 
             <Input
+              aria-label={texts.auth.twoFactor.totpCodeLabel}
               value={code}
               onChange={(event) => setCode(event.target.value)}
               inputMode="numeric"
@@ -371,6 +372,7 @@ function TotpSection({ status, onError, onDone }: SectionProps) {
 
           <div className="flex flex-wrap gap-2">
             <Input
+              aria-label={texts.auth.twoFactor.passwordRequired}
               type="password"
               value={password}
               onChange={(event) => setPassword(event.target.value)}
@@ -457,6 +459,7 @@ function EmailOtpSection({ status, onError, onDone }: SectionProps) {
 
           <div className="flex flex-wrap gap-2">
             <Input
+              aria-label={texts.auth.twoFactor.code}
               value={code}
               onChange={(event) => setCode(event.target.value)}
               inputMode="numeric"
@@ -484,6 +487,7 @@ function EmailOtpSection({ status, onError, onDone }: SectionProps) {
 
           <div className="flex flex-wrap gap-2">
             <Input
+              aria-label={texts.auth.twoFactor.passwordRequired}
               type="password"
               value={password}
               onChange={(event) => setPassword(event.target.value)}

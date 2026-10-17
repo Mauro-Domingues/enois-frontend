@@ -91,6 +91,7 @@ export function ChangeEmailDialog({ open, onOpenChange, currentEmail }: ChangeEm
               </Label>
 
               <Input
+                aria-label={texts.account.changeEmail.newEmail}
                 type="email"
                 autoComplete="email"
                 value={email}
@@ -106,6 +107,7 @@ export function ChangeEmailDialog({ open, onOpenChange, currentEmail }: ChangeEm
               </Label>
 
               <Input
+                aria-label={texts.account.changeEmail.password}
                 type="password"
                 autoComplete="current-password"
                 value={password}

@@ -102,6 +102,7 @@ export function IdentitySection() {
           </Label>
 
           <Input
+            aria-label={texts.account.identity.socialName}
             value={socialName}
             onChange={(event) => setSocialName(event.target.value)}
             maxLength={160}
@@ -113,6 +114,7 @@ export function IdentitySection() {
           <Label className="text-xs text-muted-foreground">{texts.account.identity.nickname}</Label>
 
           <Input
+            aria-label={texts.account.identity.nickname}
             value={nickname}
             onChange={(event) => setNickname(event.target.value)}
             maxLength={60}
@@ -124,6 +126,7 @@ export function IdentitySection() {
           <Label className="text-xs text-muted-foreground">{texts.account.identity.pronouns}</Label>
 
           <Input
+            aria-label={texts.account.identity.pronouns}
             value={pronouns}
             onChange={(event) => setPronouns(event.target.value)}
             maxLength={60}

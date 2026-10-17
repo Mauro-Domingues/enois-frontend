@@ -123,6 +123,7 @@ export function ApplyJobDialog({ job, children }: { job: Job; children: ReactNod
 
                 {field.type === "TEXTAREA" ? (
                   <Textarea
+                    aria-label={field.label}
                     rows={3}
                     value={values[field.id] ?? ""}
                     onChange={(event) =>
@@ -131,6 +132,7 @@ export function ApplyJobDialog({ job, children }: { job: Job; children: ReactNod
                   />
                 ) : (
                   <Input
+                    aria-label={field.label}
                     value={values[field.id] ?? ""}
                     onChange={(event) =>
                       setValues((current) => ({ ...current, [field.id]: event.target.value }))
@@ -157,6 +159,7 @@ export function ApplyJobDialog({ job, children }: { job: Job; children: ReactNod
               <Label className="text-xs">{texts.jobs.applyDialog.message}</Label>
 
               <Textarea
+                aria-label={texts.jobs.applyDialog.message}
                 rows={3}
                 value={message}
                 onChange={(event) => setMessage(event.target.value)}

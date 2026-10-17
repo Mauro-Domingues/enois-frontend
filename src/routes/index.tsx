@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Link, createFileRoute } from "@tanstack/react-router";
 
+import { MAIN_CONTENT_ID } from "@/constants/accessibility";
 import { texts } from "@/texts";
 import { ArrowRight, ArrowUpRight, Sparkles } from "lucide-react";
 
@@ -65,7 +66,7 @@ function Landing() {
           </Link>
 
           <nav
-            aria-label={texts.brand.name}
+            aria-label={texts.accessibility.mainNavigation}
             className="hidden items-center gap-6 text-sm text-muted-foreground md:flex"
           >
             {pageAnchors.map((anchor) => (
@@ -97,7 +98,7 @@ function Landing() {
         </div>
       </header>
 
-      <main>
+      <main id={MAIN_CONTENT_ID} tabIndex={-1} className="outline-none">
         <section aria-labelledby="hero-title" className="border-b border-border">
           <div className="mx-auto max-w-6xl px-4 pb-16 pt-14 sm:px-6 sm:pb-20 sm:pt-20">
             <p className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary-soft/60 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-primary">
